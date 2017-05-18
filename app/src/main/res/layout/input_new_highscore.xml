@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#ffefcb">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Congratulation!"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"
+            android:textColor="#22009e" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type your name to register a new HighScore:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="center" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp">
+
+        <EditText
+            android:id="@+id/idTxtDlgName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:maxLength="10"
+            android:maxLines="1" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/idBtnOk"
+                android:layout_width="80dp"
+                android:layout_height="55dp"
+                android:layout_column="0"
+                android:text="OK"
+                android:background="@drawable/colorbuttongreen"
+                android:textColor="@android:color/white"
+                android:layout_margin="2dp"
+                android:onClick="onClickBtnDialogOk"
+                android:nestedScrollingEnabled="true" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="55dp"
+                android:text="CANCEL"
+                android:background="@drawable/colorbuttonorange"
+                android:textColor="@android:color/white"
+                android:id="@+id/idBtnCancel"
+                android:layout_margin="2dp"
+                android:onClick="onClickBtnDialogClose" />
+
+        </LinearLayout>
+
+    </TableRow>
+
+</TableLayout>

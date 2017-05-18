@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="lao.simplememorytrainer.MainActivity"
+    android:nestedScrollingEnabled="true"
+    android:background="#ffffd5">
+
+    <FrameLayout
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:id="@+id/frameLayout"
+        android:padding="4dp"
+        android:transitionGroup="false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/idImgBtnBlue"
+            android:onClick="onClickBtnBlue"
+            android:background="@drawable/ballblue"
+            android:layout_gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_row="0"
+            android:layout_column="2" />
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/idImgBtnCyan"
+            android:onClick="onClickBtnCyan"
+            android:background="@drawable/ballcyan"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_below="@+id/idImgBtnBlue"
+            android:layout_toRightOf="@+id/idImgBtnRed"
+            android:layout_toEndOf="@+id/idImgBtnRed" />
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/idImgBtnRed"
+            android:onClick="onClickBtnRed"
+            android:background="@drawable/ballred"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_gravity="left|center_vertical"
+            android:layout_below="@+id/idImgBtnBlue"
+            android:layout_alignLeft="@+id/idImgBtnBlue"
+            android:layout_alignStart="@+id/idImgBtnBlue" />
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/idImgBtnGreen"
+            android:onClick="onClickBtnGreen"
+            android:background="@drawable/ballgreen"
+            android:layout_below="@+id/idImgBtnCyan"
+            android:layout_centerHorizontal="true"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_gravity="right|center_vertical" />
+
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/idImgGray"
+            android:onClick="onClickBtnGray"
+            android:background="@drawable/ballpurple"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_below="@+id/idImgBtnBlue"
+            android:layout_toRightOf="@+id/idImgBtnCyan"
+            android:layout_toEndOf="@+id/idImgBtnCyan" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="..."
+        android:id="@+id/txtScore"
+        android:textColor="#e98c00"
+        android:textStyle="bold|italic"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="55dp"
+        android:text="GITHUB\nSOURCE"
+        android:id="@+id/idBtnAbout"
+        android:background="@drawable/colorbuttonorange"
+        android:textColor="@android:color/white"
+        android:onClick="onClickBtnShowGitInfo"
+        android:layout_alignEnd="@+id/frameLayout"
+        android:nestedScrollingEnabled="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="55dp"
+        android:text="START\nGAME"
+        android:id="@+id/idBtnStartGame"
+        android:onClick="onClickIdBtnStartGame"
+        android:background="@drawable/colorbuttonblue"
+        android:textColor="@android:color/white"
+        android:nestedScrollingEnabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="55dp"
+        android:text="HIGH\nSCORES"
+        android:id="@+id/idBtnHighScores"
+        android:onClick="onClickBtnShowHighScores"
+        android:background="@drawable/colorbuttongreen"
+        android:textColor="@android:color/white"
+        android:nestedScrollingEnabled="false"
+        android:layout_alignTop="@+id/idBtnAbout"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
